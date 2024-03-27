@@ -1,0 +1,32 @@
+#!/bin/sh
+clear
+
+# Global color variables
+CYAN=159
+
+# A useful composable function for decorating script header titles
+useHeader() {
+	echo ""
+	# First row decorate as header title
+	local firstRow="$1"
+	shift 1
+	echo "$(tput setaf $CYAN bold)$firstRow$(tput sgr0)"
+	# Other rows decorate as header description
+	for s in "$@"; do
+		echo "$s"
+	done
+	echo ""
+	# Wait a while for the user to read the title
+	sleep 4s
+}
+
+# Description: Handle different cases for executing operations on the project.
+case "$1" in
+*)
+	# Case statement to provide help information and usage guide for the script.
+	useHeader \
+		"Help Tip" \
+		"Sorry, the script is currently under development" \
+		"There are no options available to use the app"
+	;;
+esac
