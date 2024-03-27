@@ -1,6 +1,6 @@
 # Docker TypeScript Application Boilerplate
 
-A minimal TypeScript application from scratch that will teach you how to package it and distribute it to users using Docker.
+This is a TypeScript boilerplate repository designed to help you learn how to package and distribute applications using Docker.
 
 ## License
 
